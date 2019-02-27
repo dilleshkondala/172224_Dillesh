@@ -4,60 +4,55 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 import com.cpgm.connectionservice.ConnectionFactory;
-import com.cpgm.userinfo.User;
+import com.cpgm.userpojoservices.User;
 
 public class UserDAO {
+	ConnectionFactory connectionFactiory;
 
-	ConnectionFactory connectionfactory = new ConnectionFactory();
+	public User insert(User user) {
 
-	public User read(int userId) throws SQLException, ClassNotFoundException {
-		User user = null;
-		Connection connection = ConnectionFactory.getConnection();
-		//System.out.println(connection);
+		try {
+			Connection conn = connectionFactiory.getConnection();
+			String query = "insert into userdata values(?,?,?,?,?)";
+			PreparedStatement pStatemnent = conn.prepareStatement(query);
+			pStatemnent.setString(1, user.getFirstName());
+			pStatemnent.setString(2, user.getLastname());
+			pStatemnent.setString(3, user.getUserEmail());
+			pStatemnent.setString(4, user.getUserMobile());
+			pStatemnent.setString(5, user.getPassword());
+			pStatemnent.executeQuery();
+			
 
-		String query = "select * from userdetails where userid = ?";
-		PreparedStatement pStatement = connection.prepareStatement(query);
-		pStatement.setInt(2, userId);
-		ResultSet resultSet = pStatement.executeQuery();
-		
-		//System.out.println(rset);
-
-		while(resultSet.next()) {
-			user = new User();
-			user.setUserName(resultSet.getString("uname"));;
-		} 
+		} catch (ClassNotFoundException | SQLException e) {
+				e.printStackTrace();
+		}
 		return user;
-		
 
 	}
-
 	
-	
-	public User insert(User user) throws ClassNotFoundException, SQLException
+	public User read(User user) throws ClassNotFoundException, SQLException
 	{
-		String query = "insert into userdetails values(?,?,?,?)";
 		Connection conn = ConnectionFactory.getConnection();
+		String query = "select * from userdata";
 		PreparedStatement pStatement = conn.prepareStatement(query);
-		pStatement.setString(1, user.getUserName());
-		pStatement.setInt(2, user.getUserId());
-		pStatement.setFloat(3,user.getUserMobileNum());
-		pStatement.setString(4, user.getUserAddress());
-		
+		pStatement.setString(1, "firstname");
+		pStatement.setString(2, "lastname");
+		pStatement.setString(3, "email");
+		pStatement.setString(4, "mobilenum");
+		ResultSet rs = pStatement.executeQuery();
+		while(rs.next())
+		{
+			
+		}
 		
 		return user;
 		
 	}
 	
 	
-	public int update(int mobilenum) throws SQLException {
-		return mobilenum;
-		
-	}
-	
-	
-	
-	
-	}
+}
+
 
