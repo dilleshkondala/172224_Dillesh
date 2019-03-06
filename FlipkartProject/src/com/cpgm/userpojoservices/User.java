@@ -10,6 +10,14 @@ public class User {
 	public User() {
 		super();
 	}
+	
+
+	public User(String userMobile, String password) {
+		super();
+		this.userMobile = userMobile;
+		this.password = password;
+	}
+
 
 	public User(String firstName, String lastname, String userEmail, String userMobile, String password) {
 		super();

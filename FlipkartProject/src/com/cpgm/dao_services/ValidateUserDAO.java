@@ -6,27 +6,19 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import com.cpgm.connectionservice.ConnectionFactory;
+import com.cpgm.userpojoservices.User;
 
 public class ValidateUserDAO {
-	public boolean validate(String mobilenum, String password) throws ClassNotFoundException, SQLException
-	{
-		Connection conn = ConnectionFactory.getConnection();
-		String query = "select * from userdata";
-		PreparedStatement pStatement = conn.prepareStatement(query);
-		pStatement.setString(4, "mobilenum");
-		pStatement.setString(5, "password");
-		ResultSet rs = pStatement.executeQuery(query);
-		while(rs.next())
-		{
-			String dbmobilenum = rs.getString("mobilenum");
-			String dbpassword =  rs.getString("password");
-			if(mobilenum.equals(dbmobilenum) && password.equals(dbpassword))
-			{
-			  return true;
-			}
-		}
-		
-		return false;
+	
+	
+	public static void main(String[] args) {
+		UserDAO userdao = new UserDAO();
+		User user = new User();
+		try {
+			userdao.validate(user.getUserMobile(), user.getPassword());
+		} catch (ClassNotFoundException | SQLException e) {
+			e.printStackTrace();
+		} 
 	}
 
 }

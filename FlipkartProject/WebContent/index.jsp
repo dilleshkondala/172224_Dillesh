@@ -13,7 +13,8 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-<link rel="stylesheet" type = " content/html" href="C:\Users\dkondala\git\172224_Dillesh\FlipkartProject\WebContent\CSS\indexStyleSheet.css">
+<link rel="stylesheet" type=" content/html"
+	href="C:\Users\dkondala\git\172224_Dillesh\FlipkartProject\WebContent\CSS\indexStyleSheet.css">
 </head>
 <body>
 
@@ -33,41 +34,44 @@
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="#">Home</a></li>
-					<li class="active"><a href="#">About Us</a></li>					
+					<li class="active"><a href="#">About Us</a></li>
 					<li class="active"><a href="#">Cateogories</a>
-					<form >
-						<select class="active">
-							<ul>
-								<option  class="active"><a href="#">CATEGORIES</a></option>
-							</ul>
-							<ul>
-								
+						<form>
+							<select class="active">
+								<ul>
+									<option class="active"><a href="#">CATEGORIES</a></option>
+								</ul>
+								<ul>
+
 									<option><a href="#">Electronics</a></option>
-							</ul>
-							<ul>
-								<option><a href="#">HomeNeeds</a></option>
-							</ul>
-							<ul>
-								<option><a href="#">Sports</a></option>
-							</ul>
-							<ul>
-								<option><a href="#">Books</a></option>
-							</ul>
-							<ul>
-								<option><a href="#">Kids</a></option>
-							</ul>
-						</select>
-					</form>
-					</li>
-					
+								</ul>
+								<ul>
+									<option><a href="#">HomeNeeds</a></option>
+								</ul>
+								<ul>
+									<option><a href="#">Sports</a></option>
+								</ul>
+								<ul>
+									<option><a href="#">Books</a></option>
+								</ul>
+								<ul>
+									<option><a href="#">Kids</a></option>
+								</ul>
+							</select>
+						</form></li>
+
 					<li class="active"><a href="register.jsp">Register</a></li>
 				</ul>
-				<ul class="active"><input type ="text" name = "search" placeholder="Search your wish....." size="40" ></ul>
+				<ul class="active">
+					<input type="text" name="search"
+						placeholder="Search your wish....." size="30">
+				</ul>
 				<ul class="nav navbar-nav navbar-right">
-				<form action ="login.jsp" method = "post">
-					<li> <span class="glyphicon glyphicon-log-in"></span><input type = "submit" value="Login"></li>
-				
-				</form>
+					<form action="login.jsp" method="post">
+						<li><span class="glyphicon glyphicon-log-in"></span><input
+							type="submit" value="Login"></li>
+
+					</form>
 				</ul>
 			</div>
 		</div>
@@ -77,29 +81,61 @@
 		<div class="row">
 			<div class="col-sm-8">
 				<div id="myCarousel" class="carousel slide" data-ride="carousel">
-					<!-- Indicators -->
+					
 					<ol class="carousel-indicators">
 						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 						<li data-target="#myCarousel" data-slide-to="1"></li>
+						<li data-target="#myCarousel" data-slide-to="2"></li>
+						<li data-target="#myCarousel" data-slide-to="3"></li>
 					</ol>
 
 					<!-- Wrapper for slides -->
 					<div class="carousel-inner" role="listbox">
 						<div class="item active">
-							<img src="C:\Users\dkondala\git\172224_Dillesh\FlipkartProject\WebContent\images\flipkartslideshare5.png" height="2000px" width="1700px"alt="Image">
+							<img
+								src="C:\Users\dkondala\git\172224_Dillesh\FlipkartProject\WebContent\images\flipkartslide1.png"
+								 alt="Offers_Image1" style="width:100%;">
 							<div class="carousel-caption">
-								<h3>Save 600/-</h3>
+								<h3>Image1</h3>
+							</div>
+						</div>
+						
+						<div class="item active">
+							<img
+								src="C:\Users\dkondala\git\172224_Dillesh\FlipkartProject\WebContent\images\flipkartslide2.jpg"
+								 alt="Offers_Image1" style="width:100%;">
+							<div class="carousel-caption">
+								<h3>image 2</h3>
 							</div>
 						</div>
 
 						<div class="item">
-							<img src="C:\Users\dkondala\git\172224_Dillesh\FlipkartProject\WebContent\images\flipkartslideshare4.jpg"
-							height="2000px" width="1700px" alt="Image">
+							<img
+								src="C:\Users\dkondala\git\172224_Dillesh\FlipkartProject\WebContent\images\flipkartslide3.png"
+								style="width:100%; alt="Image">
 							<div class="carousel-caption">
-								<h3>Offer 35% off</h3>
-
+								<h3>Image 3</h3>
 							</div>
 						</div>
+						
+						<div class="item">
+							<img
+								src="C:\Users\dkondala\git\172224_Dillesh\FlipkartProject\WebContent\images\flipkartslide4.png"
+								style="width:100%; alt="Image">
+							<div class="carousel-caption">
+								<h3>Image 4</h3>
+							</div>
+						</div>
+					
+					<div class="item">
+							<img
+								src="C:\Users\dkondala\git\172224_Dillesh\FlipkartProject\WebContent\images\flipkartslide5.jpg"
+								style="width:100%; alt="Image">
+							<div class="carousel-caption">
+								<h3>Image 4</h3>
+							</div>
+						</div>
+					
 					</div>
 
 					<!-- Left and right controls -->
@@ -114,38 +150,45 @@
 					</a>
 				</div>
 			</div>
-			
-			</div>
+
 		</div>
-		<hr>
+	</div>
+	<hr>
 	</div>
 
 	<div class="container text-center">
 		<h3>Offers on Mobiles</h3>
 		<br>
 		<div class="row">
+			
 			<div class="col-sm-3">
-				<a href = "mobile1.jsp"><img src="C:\Users\dkondala\git\172224_Dillesh\FlipkartProject\
-				WebContent\images\flipkartmobile1.jpg"
+				<a href="mobile1.jsp"><img
+					src="C:\Users\dkondala\git\172224_Dillesh\FlipkartProject\WebContent\images\flipkarmobile1.jpg"
 					class="img-responsive" style="width: 100%" alt="Image"></a>
-				<p>Running Offers</p>
-			</div>
-			<div class="col-sm-3">
-				<img src="C:\Users\dkondala\git\172224_Dillesh\FlipkartProject\WebContent\images\flipkartmobile2.jpg"
-					class="img-responsive" style="width: 100%" alt="Image">
 				<p>Grand Sale upto 60% off</p>
 			</div>
 			<div class="col-sm-3">
-				<img src="C:\Users\dkondala\git\172224_Dillesh\FlipkartProject\WebContent\images\flipkartimobile3.jpg"
-					class="img-responsive" style="width: 100%" alt="Image">
+				<a href="mobile2.jsp"><img
+					src="C:\Users\dkondala\git\172224_Dillesh\FlipkartProject\WebContent\images\flipkartmobile2.jpg"
+					class="img-responsive" style="width: 100%" alt="Image"></a>
 				<p>Grand Sale upto 60% off</p>
+			</div>
+
+			<div class="col-sm-3">
+				<a href="mobile3.jsp"><img
+					src="C:\Users\dkondala\git\172224_Dillesh\FlipkartProject\WebContent\images\flipkartmobile3.jpg"
+					class="img-responsive" style="width: 100%" alt="Image"></a>
+					<p>Grand Sale upto 60% off</p>
 			</div>
 			
 			<div class="col-sm-3">
-				<a href = "mobile4.jsp"><img src="C:\Users\dkondala\git\172224_Dillesh\FlipkartProject\WebContent\images\flipkartmobile4.jpg"
-					class="img-responsive" style="width: 100%" alt="Image">
-				<p>Grand Sale upto 60% off</p>
+				<a href="mobile4.jsp"><img
+					src="C:\Users\dkondala\git\172224_Dillesh\FlipkartProject\WebContent\images\flipkartmobile4.jpg"
+					class="img-responsive" style="width: 100%" alt="Image"></a>
+					<p>Grand Sale upto 60% off</p>
 			</div>
+
+			
 			
 		</div>
 		<hr>

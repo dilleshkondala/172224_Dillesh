@@ -2,6 +2,7 @@ package com.cpgm.servletservices;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,44 +11,43 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.cpgm.dao_services.UserDAO;
-import com.cpgm.dao_services.ValidateUserDAO;
 import com.cpgm.userpojoservices.User;
 
 /**
  * Servlet implementation class LoginServlet
  */
-@WebServlet(description = "This is Login Servlet", urlPatterns = { "/UserRegisterServlet" })
-public class UserServlet extends HttpServlet {
+@WebServlet(description = "This is the Login Servlet", urlPatterns = { "/LoginServlet" })
+public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	@SuppressWarnings("unused")
-	private PrintWriter out;
-    
-    public UserServlet() {
-        super();
+	private boolean status = false;
        
+  
+    public LoginServlet() {
+        super();
+      
     }
 
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		out = response.getWriter();
-		String firstName = request.getParameter("firstname");
-		String lastName	 = request.getParameter("lastname");
-		String email 	 = request.getParameter("email");
+		PrintWriter out =  response.getWriter();
 		String mobileNumber= request.getParameter("mobilenum");
 		String password  = request.getParameter("password");
-		
+		User user1 = new User(mobileNumber,password);
+				
 		UserDAO userdao = new UserDAO();
-		try{
-			User user = new User(firstName,lastName,email,mobileNumber,password);
-			userdao.insert(user);
-		}
-		catch(Exception e)
-		{
-			 e.printStackTrace();
-		}
+		try {
+			System.out.println(user1.getUserMobile());
+			status = userdao.validate(user1.getUserMobile(),user1.getPassword());
+			if(status = true)
+				response.sendRedirect("successLogin.html");
+			else
+				out.print("Login failed....\nTry Again..");
+		} 
+		catch (ClassNotFoundException | SQLException e) {
 		
-		response.sendRedirect("successRegister.html");
+			e.printStackTrace();
+		}
 		
 	}
-		
+	
 }

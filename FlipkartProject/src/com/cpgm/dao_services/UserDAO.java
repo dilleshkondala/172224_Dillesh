@@ -4,8 +4,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
-
 import com.cpgm.connectionservice.ConnectionFactory;
 import com.cpgm.userpojoservices.User;
 
@@ -15,7 +13,7 @@ public class UserDAO {
 	public User insert(User user) {
 
 		try {
-			Connection conn = connectionFactiory.getConnection();
+			Connection conn = ConnectionFactory.getConnection();
 			String query = "insert into userdata values(?,?,?,?,?)";
 			PreparedStatement pStatemnent = conn.prepareStatement(query);
 			pStatemnent.setString(1, user.getFirstName());
@@ -42,15 +40,91 @@ public class UserDAO {
 		pStatement.setString(2, "lastname");
 		pStatement.setString(3, "email");
 		pStatement.setString(4, "mobilenum");
+		pStatement.setString(5, "password");
 		ResultSet rs = pStatement.executeQuery();
 		while(rs.next())
 		{
-			
+		
 		}
 		
 		return user;
 		
 	}
+	
+	public boolean validate(String mobilenum, String password) throws ClassNotFoundException, SQLException
+	{
+		Connection conn = ConnectionFactory.getConnection();
+		
+		String query = "select mobilenumber,password from userdata";
+		PreparedStatement pStatement = conn.prepareStatement(query);
+		
+		ResultSet rs = pStatement.executeQuery();
+		while(rs.next())
+		{
+			String dbmobilenum = rs.getString("mobilenumber");
+			String dbpassword =  rs.getString("password");
+			
+			System.out.println("dbname= "+dbmobilenum);
+			System.out.println("dbpassword= "+dbpassword);
+			
+			if(mobilenum.equals(dbmobilenum) && password.equals(dbpassword))
+			{
+				
+				System.out.println("Form mobile= "+mobilenum);
+				System.out.println("Form password= "+password);
+				System.out.println("Login Success.....");
+			}
+			
+		}
+		/*
+		 * else { System.out.println("Something went wrong...!!!\nTry Again....");
+		 * 
+		 * }
+		 */
+		return false;
+		
+		
+	}
+	
+	private void validate123(User user) throws ClassNotFoundException, SQLException {
+		Connection conn = ConnectionFactory.getConnection();
+		User user1=new User();
+		
+		String query = "select mobilenumber,password from userdata";
+		PreparedStatement pStatement = conn.prepareStatement(query);
+		
+		ResultSet rs = pStatement.executeQuery();
+		String dbmobilenum = rs.getString("mobilenumber");
+		String dbpassword =  rs.getString("password");
+		
+		System.out.println("dbname= "+dbmobilenum);
+		System.out.println("dbpassword= "+dbpassword);
+		
+		while(rs.next()) {
+		if(user1.getUserMobile().equals(dbmobilenum) && user1.getPassword().equals(dbpassword))
+		{
+			
+			System.out.println("Form mobile= "+user1.getUserMobile());
+			System.out.println("Form password= "+user1.getPassword());
+			System.out.println("Login Success.....");
+		}
+		
+		else {
+			System.out.println("User not there");
+		}
+		}
+		
+		
+		
+	}
+	
+	
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+		UserDAO dao=new UserDAO();
+		dao.validate123(new User("9014378464","renuka"));
+	}
+
+	
 	
 	
 }

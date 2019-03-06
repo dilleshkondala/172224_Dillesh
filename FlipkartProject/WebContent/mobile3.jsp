@@ -13,11 +13,11 @@
 <body>
 
 <div class="container-fluid">
-  <h1>Motorolla</h1>
+  <h1>iPhoine X</h1>
   <div class="row">
     <div class="col-md-4">
     	<form action="addcart.jsp">
-     		 <img alt="iPhone.png" src="C:\Users\dkondala\git\172224_Dillesh\FlipkartProject\WebContent\images\flipkartmobile4.jpg">
+     		 <img alt="iPhone.png" src="C:\Users\dkondala\git\172224_Dillesh\FlipkartProject\WebContent\images\flipkartmobile3.jpg">
     		<input type = "submit" value = "Add to cart">
     		<input type = "submit" value ="Buy Now">
     	</form>
@@ -26,7 +26,7 @@
    
     </div>
     <div class="col-md-8">
-		<p>Motorolla (white Ocean, 64 GB)  (4 GB RAM)</p>
+		<p>iPhone X (white Ocean, 64 GB)  (4 GB RAM)</p>
 		<p>4.52,34,845 Ratings & 30,822 Reviews</p>
 		<p>Extra ₹2000 discount</p>
 		<p>₹12,990₹14,99013% off</p>
