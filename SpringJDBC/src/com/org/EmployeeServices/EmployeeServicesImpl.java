@@ -9,7 +9,7 @@ import com.org.implementation.EmployeeDaoImpl;
 import com.org.springInterface.EmployeeServiceInterface;
 import com.org.springpojo.Employee;
 
-public class EmployeeServices implements EmployeeServiceInterface {
+public class EmployeeServicesImpl implements EmployeeServiceInterface {
 
 	ApplicationContext context = new ClassPathXmlApplicationContext("springconfig.xml");
 	EmployeeDaoImpl empdao = (EmployeeDaoImpl)context.getBean("empdao");
@@ -26,7 +26,7 @@ public class EmployeeServices implements EmployeeServiceInterface {
 	@Override
 	public List<Employee> getEmp(Employee emp) {
 		
-		return empdao.employee(emp);
+		return null;
 	}
 
 	@Override

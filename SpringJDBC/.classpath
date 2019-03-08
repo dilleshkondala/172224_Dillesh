@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
-	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry including="**/*.java" kind="src" output="target/classes" path="src">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/dkondala/Documents/jarfiles/spring-framework-5.1.5.RELEASE/libs/spring-aop-5.1.5.RELEASE.jar"/>
 	<classpathentry kind="lib" path="C:/Users/dkondala/Documents/jarfiles/spring-framework-5.1.5.RELEASE/libs/spring-aop-5.1.5.RELEASE-javadoc.jar"/>
 	<classpathentry kind="lib" path="C:/Users/dkondala/Documents/jarfiles/spring-framework-5.1.5.RELEASE/libs/spring-aop-5.1.5.RELEASE-sources.jar"/>
@@ -66,5 +75,35 @@
 	<classpathentry kind="lib" path="C:/Users/dkondala/Documents/jarfiles/spring-framework-5.1.5.RELEASE/libs/spring-websocket-5.1.5.RELEASE-javadoc.jar"/>
 	<classpathentry kind="lib" path="C:/Users/dkondala/Documents/jarfiles/spring-framework-5.1.5.RELEASE/libs/spring-websocket-5.1.5.RELEASE-sources.jar"/>
 	<classpathentry kind="lib" path="C:/oraclexe/app/oracle/product/11.2.0/server/jdbc/lib/ojdbc6.jar"/>
-	<classpathentry kind="output" path="bin"/>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="target/generated-sources/annotations">
+		<attributes>
+			<attribute name="ignore_optional_problems" value="true"/>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="m2e-apt" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/dkondala/Documents/jarfiles/Aop Lib/aopalliance-.jar"/>
+	<classpathentry kind="lib" path="C:/Users/dkondala/Documents/jarfiles/Aop Lib/asm-3.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/dkondala/Documents/jarfiles/Aop Lib/aspectjrt.jar"/>
+	<classpathentry kind="lib" path="C:/Users/dkondala/Documents/jarfiles/Aop Lib/aspectjweaver.jar"/>
+	<classpathentry kind="lib" path="C:/Users/dkondala/Documents/jarfiles/Aop Lib/cglib-2.2.jar"/>
+	<classpathentry kind="src" output="target/test-classes" path="target/generated-test-sources/test-annotations">
+		<attributes>
+			<attribute name="ignore_optional_problems" value="true"/>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="m2e-apt" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/dkondala/Downloads/images/New folder/aopalliance-1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/dkondala/Downloads/images/New folder/aspectj-1.9.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/dkondala/Downloads/images/New folder/aspectj-1.9.2-src.jar"/>
+	<classpathentry kind="lib" path="C:/Users/dkondala/Downloads/images/New folder/commons-logging-1.2.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
 </classpath>

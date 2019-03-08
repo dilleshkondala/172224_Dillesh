@@ -8,6 +8,7 @@ import java.util.List;
 import javax.activation.DataSource;
 
 import org.springframework.dao.DataAccessException;
+import org.springframework.jdbc.core.JdbcOperations;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCallback;
 
@@ -17,8 +18,8 @@ import com.org.springpojo.EmployeeMapper;
 
 public class EmployeeDaoImpl implements EmployeeDaoInterface{
 	
-	private JdbcTemplate jdbcTemplate;
-	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {  
+	private JdbcOperations jdbcTemplate;
+	public void setJdbcTemplate(JdbcOperations jdbcTemplate) {  
 	    this.jdbcTemplate = jdbcTemplate;  
 	}  
 	
@@ -64,8 +65,9 @@ public class EmployeeDaoImpl implements EmployeeDaoInterface{
 	public boolean update(Employee emp) {
 		String updateQuery = "update emp set sal = ? where empid = ?";
 		this.jdbcTemplate.update(updateQuery, emp.getEmpSal(), emp.getEmpId());
-		
 		return true;
+		
+		
 	}
 
 	public List<Employee> employee(Employee emp) {
