@@ -12,9 +12,9 @@ import org.springframework.jdbc.core.JdbcOperations;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCallback;
 
+import com.org.pojoservices.Employee;
+import com.org.pojoservices.EmployeeMapper;
 import com.org.springInterface.EmployeeDaoInterface;
-import com.org.springpojo.Employee;
-import com.org.springpojo.EmployeeMapper;
 
 public class EmployeeDaoImpl implements EmployeeDaoInterface{
 	

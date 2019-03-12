@@ -80,7 +80,7 @@
 	
 	<p align="center">LOGIN HERE</p>
 	<div class="container">
-		<form action="LoginServlet" method="post">
+		<form action="login" method="post">
 			<label><b>Mobile Number</b></label> <input type="text"
 				placeholder="Enter your Mobile number" name="mobilenum" required> 
 			<label><b>Password</b></label>

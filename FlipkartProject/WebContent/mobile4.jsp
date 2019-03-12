@@ -17,7 +17,8 @@
   <div class="row">
     <div class="col-md-4">
     	<form action="addcart.jsp">
-     		 <img alt="iPhone.png" src="C:\Users\dkondala\git\172224_Dillesh\FlipkartProject\WebContent\images\flipkartmobile4.jpg">
+     		 <img alt="iPhone.png" src="C:\Users\dkondala\git\172224_Dillesh\FlipkartProject\WebContent\images\flipkartmobileimage4.jpeg">
+    		<br>
     		<input type = "submit" value = "Add to cart">
     		<input type = "submit" value ="Buy Now">
     	</form>

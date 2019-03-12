@@ -6,8 +6,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.org.implementation.EmployeeDaoImpl;
+import com.org.pojoservices.Employee;
 import com.org.springInterface.EmployeeServiceInterface;
-import com.org.springpojo.Employee;
 
 public class EmployeeServicesImpl implements EmployeeServiceInterface {
 

@@ -2,7 +2,7 @@ package com.org.springInterface;
 
 import java.util.List;
 
-import com.org.springpojo.Employee;
+import com.org.pojoservices.Employee;
 
 public interface EmployeeDaoInterface {
 	
