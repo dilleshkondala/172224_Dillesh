@@ -1,24 +1,24 @@
-package com.org.messenger.messengerapp.services;
+ package com.org.messenger.messengerapp.services;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
+import com.org.messenger.messengerapp.databse.DataBaseClass;
 import com.org.messenger.messengerapp.pojo.Message;
 
 public class MessageService {
-
+	
+	private Map<Integer,Message> messages = DataBaseClass.getMessages();
+	
 	public List<Message> getAllMessages()
 	{
-		Message m = new Message();
+		return new ArrayList<Message>(messages.values());
 		
-		List<Message> list =  new ArrayList<>();
-		list.add(m1);
-		list.add(m2);
-		list.add(m3);
-		
-		
-		return list;
-		
+	}
+	
+	public Message getMessage(int id)
+	{
+		return messages.get(id);
 	}
 }

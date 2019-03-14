@@ -5,17 +5,17 @@ import java.util.Date;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
-public class Message {
+public class Profile {
 	private int id;
 	private String message;
 	private Date created;
 	private String author;
 	
-	public Message() {
+	public Profile() {
 		super();
 	}
 
-	public Message(int id, String message, Date created, String author) {
+	public Profile(int id, String message, Date created, String author) {
 		super();
 		this.id = id;
 		this.message = message;

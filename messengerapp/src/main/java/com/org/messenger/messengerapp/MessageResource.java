@@ -10,7 +10,7 @@ import javax.ws.rs.core.MediaType;
 import com.org.messenger.messengerapp.pojo.Message;
 import com.org.messenger.messengerapp.services.MessageService;
 
-@Path("/mymessage")
+@Path("/message")
 public class MessageResource {
 	
 	@GET
